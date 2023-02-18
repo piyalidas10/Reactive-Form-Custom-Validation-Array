@@ -1,0 +1,5 @@
+.error-parent .error-show {
+    background: #cc0000;
+    color: #ffffff;
+    text-transform: capitalize;
+  }

@@ -1,0 +1,55 @@
+<!-- main app container -->
+<div class="card m-3">
+  <h5 class="card-header">Angular 15 Address Form Validation</h5>
+  <div class="card-body">
+    <form
+      *ngIf="registerForm"
+      [formGroup]="registerForm"
+      (ngSubmit)="onSubmit()"
+    >
+        <div class="mb-3 mt-3">
+          <label>City</label>
+          <input type="text" formControlName="city" class="form-control" />
+          <app-error
+            [showError]="showError"
+            [field]="registerForm.controls['city']"
+          ></app-error>
+        </div>
+      <div class="mb-3 mt-3">
+        <label>Address 1</label>
+        <textarea formControlName="address1" class="form-control"></textarea>
+        <app-error
+          [showError]="showError"
+          [field]="registerForm.controls['address1']"
+        ></app-error>
+      </div>
+      <div class="mb-3 mt-3">
+        <label>Address 2</label>
+        <textarea formControlName="address2" class="form-control"></textarea>
+        <app-error
+          [showError]="showError"
+          [field]="registerForm.controls['address2']"
+        ></app-error>
+      </div>
+      <div class="mb-3 mt-3">
+        <label>State</label>
+        <input type="text" formControlName="state" class="form-control" />
+        <app-error
+          [showError]="showError"
+          [field]="registerForm.controls['state']"
+        ></app-error>
+      </div>
+      <div class="mb-3 mt-3">
+        <label>Zipcode</label>
+        <input type="text" formControlName="zipcode" class="form-control" />
+        <app-error
+          [showError]="showError"
+          [field]="registerForm.controls['zipcode']"
+        ></app-error>
+      </div>
+      <div class="mb-3 mt-3 text-center">
+        <button type="submit" class="btn btn-primary mr-5">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>

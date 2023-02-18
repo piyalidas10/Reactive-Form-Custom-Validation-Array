@@ -1,0 +1,82 @@
+<div
+  class="{{ customClass }}"
+  *ngIf="field?.invalid && (field?.touched || showError)"
+>
+  <div class="error-show required" *ngIf="field?.errors?.required">
+    {{ field?.errors?.required?.message }}
+  </div>
+  <div
+    class="error-show"
+    *ngIf="field?.errors?.email"
+    i18n="
+      {{field?.errors?.email?.source}}|{{field?.errors?.email?.desc}}@@APP.ERROR_COMP.RequiredErrorMessage"
+  >
+    {{ field?.errors?.email?.message }}
+  </div>
+  <div
+    class="error-show"
+    *ngIf="field?.errors?.customError"
+    i18n="
+      {{field?.errors?.customError?.source}}|{{field?.errors?.email?.desc}}@@APP.ERROR_COMP.RequiredErrorMessage"
+  >
+    {{ field?.errors?.customError?.message }}
+  </div>
+  <div
+    class="error-show"
+    *ngIf="field?.errors?.minlength"
+    i18n="
+      {{field?.errors?.minlength?.source}}|{{field?.errors?.minlength?.desc}}@@APP.ERROR_COMP.MinlengthErrorMessage"
+  >
+    {{ field?.errors?.minlength?.message }}
+  </div>
+  <div
+    class="error-show"
+    *ngIf="field?.errors?.maxlength"
+    i18n="
+      {{field?.errors?.maxlength?.source}}|{{field?.errors?.maxlength?.desc}}@@APP.ERROR_COMP.MaxlengthErrorMessage"
+  >
+    {{ field?.errors?.maxlength?.message }}
+  </div>
+  <div
+    class="error-show"
+    *ngIf="field?.errors?.url"
+    i18n="
+      {{field?.errors?.url?.source}}|{{field?.errors?.url?.desc}}@@APP.ERROR_COMP.UrlErrorMessage"
+  >
+    {{ field?.errors?.url?.message }}
+  </div>
+  <div
+    class="error-show"
+    *ngIf="field?.errors?.zipcode"
+    i18n="
+      {{field?.errors?.zipcode?.source}}|{{field?.errors?.zipcode?.desc}}@@APP.ERROR_COMP.ZipcodeErrorMessage"
+  >
+    {{ field?.errors?.zipcode?.message }}
+  </div>
+  <div
+    class="error-show"
+    *ngIf="field?.errors?.year"
+    i18n="
+      {{field?.errors?.year?.source}}|{{field?.errors?.year?.desc}}@@APP.ERROR_COMP.YearErrorMessage"
+  >
+    {{ field?.errors?.year?.message }}
+  </div>
+  <div
+    class="error-show"
+    *ngIf="field?.errors?.stringOnly"
+    i18n="
+      Should contain only characters|Should contain only character
+      message@@APP.ERROR_COMP.StringOnlyErrorMessage"
+  >
+    Should contain only characters
+  </div>
+  <div
+    class="error-show"
+    *ngIf="field?.errors?.stringWithSpaceOnly"
+    i18n="
+      Should contain only characters with space|Should contain only character
+      with space message@@APP.ERROR_COMP.StringWithSpaceOnlyErrorMessage"
+  >
+    Should contain only characters with space
+  </div>
+</div>
