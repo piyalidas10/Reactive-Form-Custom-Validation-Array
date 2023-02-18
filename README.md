@@ -14,6 +14,10 @@ export class AddressForm {
 }
 ```
 
+### Typescript Utility types
+![Typescript utility types](typescript_utility_types.png)
+
+
 ### app.component.html
 error component with showError & field input values to display error.
 
